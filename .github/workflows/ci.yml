@@ -44,6 +44,10 @@ jobs:
       pages: write
       id-token: write
     
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     concurrency:
       group: pages
       cancel-in-progress: false
@@ -53,4 +57,5 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
