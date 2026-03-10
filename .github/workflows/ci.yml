@@ -7,9 +7,9 @@ on:
     branches: [master]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v4
 
@@ -29,8 +29,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
   deploy:
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     
@@ -44,16 +49,8 @@ jobs:
       cancel-in-progress: false
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
