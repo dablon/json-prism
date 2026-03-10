@@ -1,63 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSON Prism - Demo</title>
-  <style>
-    :root {
-      --bg-primary: #0f0f14;
-      --bg-secondary: #1a1a24;
-      --text-primary: #e4e4e7;
-      --text-secondary: #a1a1aa;
-      --key-color: #7ee787;
-      --string-color: #a5d6ff;
-      --number-color: #79c0ff;
-      --boolean-color: #ff7b72;
-      --null-color: #8b949e;
-      --bracket-color: #ff7b72;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      padding: 2rem;
-      margin: 0;
-    }
-    h1 { color: #6366f1; }
-    .viewer {
-      background: var(--bg-secondary);
-      padding: 1.5rem;
-      border-radius: 12px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .key { color: var(--key-color); }
-    .string { color: var(--string-color); }
-    .number { color: var(--number-color); }
-    .boolean { color: var(--boolean-color); }
-    .null { color: var(--null-color); font-style: italic; }
-    .bracket { color: var(--bracket-color); }
-  </style>
-</head>
-<body>
-  <h1>{} JSON Prism</h1>
-  <p>Si ves esto, el sitio ESTÁ FUNCIONANDO:</p>
-  <div class="viewer">
-<span class="bracket">{</span>
-  <span class="key">"name"</span>: <span class="string">"JSON Prism"</span>,
-  <span class="key">"version"</span>: <span class="string">"1.0.0"</span>,
-  <span class="key">"features"</span>: <span class="bracket">[</span>
-    <span class="string">"Syntax highlighting"</span>,
-    <span class="string">"Collapsible nodes"</span>,
-    <span class="string">"Dark theme"</span>
-  <span class="bracket">]</span>,
-  <span class="key">"works"</span>: <span class="boolean">true</span>,
-  <span class="key">"deployed"</span>: <span class="null">null</span>
-<span class="bracket">}</span>
-  </div>
-  <p style="color: #7ee787;">✓ Servidor funcionando correctamente</p>
-  <p>Recarga la página principal: <a href="https://dablon.github.io/json-prism/" style="color: #6366f1;">https://dablon.github.io/json-prism/</a></p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Prism - Beautiful JSON Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-tPX0Uakh.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-mvWKOciB.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
